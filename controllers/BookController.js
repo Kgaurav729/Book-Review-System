@@ -65,3 +65,23 @@ exports.getBookById = async (req, res) => {
     res.status(500).json({ message: 'Error fetching book' });
   }
 };
+
+
+exports.searchBooks = async (req, res) => {
+  const { query } = req.query;
+
+  if (!query) {
+    return res.status(400).json({ message: 'Query parameter is required' });
+  }
+
+  try {
+    const regex = new RegExp(query, 'i'); 
+    const books = await Book.find({
+      $or: [{ title: regex }, { author: regex }],
+    });
+
+    res.json({ total: books.length, books });
+  } catch (err) {
+    res.status(500).json({ message: 'Error searching books' });
+  }
+};

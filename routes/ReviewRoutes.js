@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { validateReview } = require('../middlewares/Validate');
 const protect = require('../middlewares/AuthMiddleware');
 const {
   addReview,
