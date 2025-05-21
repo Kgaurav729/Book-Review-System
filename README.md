@@ -173,7 +173,3 @@ curl -X POST http://localhost:3000/api/books/<BOOK_ID>/reviews   -H "Authorizati
 - 🔜 Favorite books per user
 
 ---
-
-## 📄 License
-
-MIT License
