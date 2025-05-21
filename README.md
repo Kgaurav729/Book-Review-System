@@ -17,7 +17,6 @@ A RESTful API for managing books and user reviews built with Node.js, Express, a
   - Role-based access control
   - Sorting
   - Favorites
-  - Swagger docs
 
 ---
 
@@ -172,7 +171,6 @@ curl -X POST http://localhost:3000/api/books/<BOOK_ID>/reviews   -H "Authorizati
 - 🔜 Role-based access (admin, user)
 - 🔜 Book sorting (by rating/date)
 - 🔜 Favorite books per user
-- 🔜 Swagger API documentation
 
 ---
 
